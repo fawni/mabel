@@ -1,4 +1,4 @@
-// mabel, a declarative image generation tool
+// mabel, declarative pixel art
 // Copyright (c) 2024 fawn
 //
 // SPDX-License-Identifier: Apache-2.0
@@ -17,7 +17,7 @@ const fn clap_style() -> Styles {
         .placeholder(AnsiColor::Green.on_default())
 }
 
-/// mabel, a declarative image generation tool
+/// mabel, declarative pixel art
 #[derive(Parser)]
 #[clap(version, author, styles = clap_style())]
 struct Args {

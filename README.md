@@ -1,6 +1,6 @@
 # mabel 🍁
 
-A declarative image generation tool 🎨
+Declarative pixel art 🎨
 
 Sometime ago i found a really cute project called [tep](https://github.com/gennyble/tep) that generates images based on its own `.tep` format! I had problems with it that prevented me from actually using it. Namely that you cannot control the scale of each "pixel".
 

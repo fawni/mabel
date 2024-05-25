@@ -1,6 +1,6 @@
 [package]
 name = "mabel"
-description = "declarative image generation tool"
+description = "declarative pixel art"
 authors = ["fawn <fawn@rinici.de>"]
 version = "0.1.0"
 edition = "2021"

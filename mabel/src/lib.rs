@@ -1,4 +1,4 @@
-// mabel, a declarative image generation tool
+// mabel, declarative pixel art
 // Copyright (c) 2024 fawn
 //
 // SPDX-License-Identifier: Apache-2.0
