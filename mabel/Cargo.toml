@@ -1,0 +1,15 @@
+[package]
+name = "mabel"
+description = "declarative image generation tool"
+authors = ["fawn <fawn@rinici.de>"]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://codeberg.org/fawn/mabel"
+
+
+[dependencies]
+clap = { version = "4.5.4", features = ["derive"] }
+color-art = { version = "0.3.8", default-features = false }
+mabel-eno = { version = "0.4.4", path = "../mabel-eno" }
+png = "0.17.13"

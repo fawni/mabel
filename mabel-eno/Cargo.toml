@@ -1,0 +1,11 @@
+[package]
+authors = ["Simon Repp", "fawn <fawn@rinici.de>"]
+description = "Eno parsing library for Rust"
+version = "0.4.4"
+edition = "2021"
+name = "mabel-eno"
+license = "Apache-2.0"
+repository = "https://codeberg.org/fawn/mabel"
+
+[dev-dependencies]
+indoc = "2.0.4"

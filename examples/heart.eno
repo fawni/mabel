@@ -1,0 +1,33 @@
+> ░▄▀▄▀▀▀▀▄▀▄░░░░░░░░░
+> ░█░░░░░░░░▀▄░░░░░░▄░
+> █░░▀░░▀░░░░░▀▄▄░░█░█
+> █░▄░█▀░▄░░░░░░░▀▀░░█
+> █░░▀▀▀▀░░░░░░░░░░░░█
+> █░░░░░░░░░░░░░░░░░░█
+> █░░░░░░░░░░░░░░░░░░█
+> ░█░░▄▄░░▄▄▄▄░░▄▄░░█░
+> ░█░▄▀█░▄▀░░█░▄▀█░▄▀░
+> ░░▀░░░▀░░░░░▀░░░▀░░░
+
+size: 8
+palette:
+r = #ff0000
+
+-- pixels
+  rr         rr  
+ rrrrr     rrrrr 
+rrrrrrr  rrrrrrrr
+rrrrrrr  rrrrrrrr
+rrrrrrrrrrrrrrrrr
+rrrrrrrrrrrrrrrrr
+rrrrrrrrrrrrrrrrr
+rrrrrrrrrrrrrrrrr
+rrrrrrrrrrrrrrrrr
+rrrrrrrrrrrrrrrrr
+  rrrrrrrrrrrrr  
+  rrrrrrrrrrrrr  
+    rrrrrrrrr    
+    rrrrrrrrr    
+      rrrrr      
+      rrrrr      
+-- pixels

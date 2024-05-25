@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "mabel",
+    "mabel-eno",
+]
+
+[profile.release]
+lto = true
+strip = true
+codegen-units = 1
