@@ -2,7 +2,7 @@
 
 Declarative pixel art 🎨
 
-Sometime ago i found a really cute project called [tep](https://github.com/gennyble/tep) that generates images based on its own `.tep` format! I had problems with it that prevented me from actually using it. Namely that you cannot control the scale of each "pixel".
+Sometime ago i found a really cute project called [tep](https://github.com/gennyble/tep) that generates images based on its own `.tep` format! I had problems with it that prevented me from actually using it, namely that you cannot control the scale of each "pixel".
 
 Mabel uses the same approach to generate simple pixel images in a declarative, reproducible manner!
 
