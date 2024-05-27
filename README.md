@@ -16,7 +16,7 @@ Declarative pixel art.
 
 ### Format
 
-Mabel uses the [Eno](https://eno-lang.org) data language, you can learn more about Eno
+mabel uses the [Eno](https://eno-lang.org) data language, you can learn more about Eno
 [here](https://eno-lang.org/guide).
 
 | Name    | Type                                                                    | Required | Notes                                                                                                                                                                                                    |
@@ -28,6 +28,14 @@ Mabel uses the [Eno](https://eno-lang.org) data language, you can learn more abo
 | pixels  | [Multiline Field](https://eno-lang.org/guide/elements/multiline-fields) | Yes      | The image data. Spaces and empty lines are transparent. Characters must be defined in `palette`.                                                                                                         |
 
 To see some examples, check out the [examples](examples) directory.
+
+### Aseprite
+
+mabel can convert an aseprite file (`.ase`/`.aseprite`) into Eno; allowing you to edit aseprite files with mabel.
+
+    mabel aseprite <input.ase> [-o output.eno]
+
+This feature is gated behind an `aseprite` feature flag. Enabled by default.
 
 ## Acknowledgements
 

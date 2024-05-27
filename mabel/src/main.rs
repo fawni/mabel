@@ -5,8 +5,10 @@
 
 use clap::{
     builder::{styling::AnsiColor, Styles},
-    Parser,
+    Parser, Args
 };
+#[cfg(feature = "aseprite")]
+use clap::Subcommand;
 use mabel::Mabel;
 
 const fn clap_style() -> Styles {
@@ -20,8 +22,31 @@ const fn clap_style() -> Styles {
 /// mabel, declarative pixel art
 #[derive(Parser)]
 #[clap(version, author, styles = clap_style())]
-struct Args {
+struct MabelArgs {
+    #[cfg(feature = "aseprite")]
+    #[command(subcommand)]
+    command: Option<Command>,
+
     /// The path to the mabel file
+    #[arg()]
+    file: Option<String>,
+
+    /// The path to the output file
+    #[arg(short, long)]
+    output: Option<String>,
+}
+
+#[cfg(feature = "aseprite")]
+#[derive(Subcommand)]
+enum Command {
+    /// Convert an aseprite file to eno
+    Aseprite(Aseprite),
+}
+
+#[derive(Args)]
+#[command(aliases = ["ase"])]
+struct Aseprite {
+    /// The path to the aseprite/ase file
     #[arg()]
     file: String,
 
@@ -31,12 +56,24 @@ struct Args {
 }
 
 fn run() -> Result<(), Box<dyn std::error::Error>> {
-    let args = Args::parse();
-    let mabel = Mabel::from_file(&args.file)?;
-    let output = args.output.as_deref().unwrap_or("output.png");
+    let args = MabelArgs::parse();
 
-    // println!("{mabel:#?}");
-    mabel.save_png(output)?;
+    #[cfg(feature = "aseprite")]
+    if let Some(Command::Aseprite(args)) = args.command {
+        let output = args.output.unwrap_or("output.eno".to_owned());
+        mabel::aseprite::save_to_eno(&args.file, &output)?;
+
+        return Ok(());
+    }
+
+    let output = args.output.unwrap_or("output.png".to_owned());
+    let mabel = if let Some(file) = args.file {
+        Mabel::from_file(&file)?
+    } else {
+        return Err("No eno file provided.".into());
+    };
+
+    mabel.save_png(&output)?;
 
     Ok(())
 }

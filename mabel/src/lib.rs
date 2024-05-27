@@ -7,6 +7,9 @@ use color_art::Color;
 use png::Encoder;
 use std::{collections::HashMap, vec};
 
+#[cfg(feature = "aseprite")]
+pub mod aseprite;
+
 pub type Error = Box<dyn std::error::Error>;
 pub type Result<T> = std::result::Result<T, Error>;
 
@@ -122,9 +125,6 @@ impl Mabel {
         img.set_color(png::ColorType::Rgba);
         img.set_depth(png::BitDepth::Eight);
 
-        //img.set_palette(&palette);
-
-        // write the image
         let mut writer = img.write_header()?;
         writer.write_image_data(&palette)?;
 
