@@ -22,6 +22,8 @@ scscscsc
 -- pixels
 ```
 
+![css](./examples/source.png)
+
 for an in-depth explanation checkout the [Format](#format) section.
 
 ## Installation
